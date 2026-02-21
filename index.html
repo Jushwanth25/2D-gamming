@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Platformer - Professional Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>APEX PLATFORMER</h1>
+            <div class="game-info">
+                <span id="levelDisplay">Level 1</span>
+                <span id="scoreDisplay">Score: 0</span>
+                <span id="timeDisplay">Time: 0s</span>
+            </div>
+        </div>
+        
+        <div class="controls-info">
+            <div class="player-controls">
+                <h3>Controls</h3>
+                <p>W - Jump | A/D - Move | Space - Dash | Mouse - Look Around</p>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="ui-panel">
+            <button id="startBtn" class="btn btn-primary">Start Game</button>
+            <button id="pauseBtn" class="btn btn-secondary">Pause</button>
+            <button id="restartBtn" class="btn btn-secondary">Restart Level</button>
+            <button id="settingsBtn" class="btn btn-secondary">Settings</button>
+            <div class="sound-control">
+                <input type="checkbox" id="soundToggle" checked>
+                <label for="soundToggle">Sound On</label>
+            </div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <p id="gameOverMessage"></p>
+                <button id="nextLevelBtn" class="btn btn-primary">Next Level</button>
+                <button id="retryBtn" class="btn btn-secondary">Retry</button>
+            </div>
+        </div>
+
+        <div id="pauseOverlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>PAUSED</h2>
+                <button id="resumeBtn" class="btn btn-primary">Resume</button>
+                <button id="mainMenuBtn" class="btn btn-secondary">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="settingsOverlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>CONTROLS SETTINGS</h2>
+                <div class="settings-container">
+                    <div class="setting-item">
+                        <label>Jump Key:</label>
+                        <button id="jumpKeyBtn" class="key-bind-btn">W</button>
+                        <span class="key-status" id="jumpStatus"></span>
+                    </div>
+                    <div class="setting-item">
+                        <label>Move Left Key:</label>
+                        <button id="leftKeyBtn" class="key-bind-btn">A</button>
+                        <span class="key-status" id="leftStatus"></span>
+                    </div>
+                    <div class="setting-item">
+                        <label>Move Right Key:</label>
+                        <button id="rightKeyBtn" class="key-bind-btn">D</button>
+                        <span class="key-status" id="rightStatus"></span>
+                    </div>
+                    <div class="setting-item">
+                        <label>Dash Key:</label>
+                        <button id="dashKeyBtn" class="key-bind-btn">SPACE</button>
+                        <span class="key-status" id="dashStatus"></span>
+                    </div>
+                </div>
+                <div class="settings-buttons">
+                    <button id="resetKeysBtn" class="btn btn-secondary">Reset to Default</button>
+                    <button id="closeSettingsBtn" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
