@@ -1,6 +1,7 @@
-# APEX PLATFORMER - Professional Animated Game
+# APEX PLATFORMER - Animated Game
 
 A high-performance, beautifully animated 2D platformer game built with pure HTML5 Canvas, featuring smooth character animations, particle effects, physics engine, progressive difficulty levels, and professional audio integration.
+<img width="1875" height="920" alt="image" src="https://github.com/user-attachments/assets/897926ae-d157-49b0-8d5d-397eeec5a8fb" />
 
 ## 🎮 Game Features
 
